@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" name="name">
+    <button onclick="login()">login</button>
+
+    <script>
+      function login() {
+        let name = document.querySelector("input[name='name']");
+        if (name.value !== "Admin") {
+          alert("I don't know you.");
+          return;
+        }
+  
+        let password = prompt("password?");
+        
+        if (password === null) {
+          alert("Canceled");
+          return;
+        }
+        if (password === "TheMaster") {
+          alert("Welcome!");
+          return;
+        }
+        alert("Wrong password");
+      }
+    </script>
+  </body>
+</html>
