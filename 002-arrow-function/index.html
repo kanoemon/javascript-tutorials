@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="clickButton()">submit</button>
+
+    <script>
+      function clickButton() {
+        ask(
+          "Do you agree?",
+          () => alert("You agreed."),
+          () => alert("You canceled the execution.")
+        );
+      }
+
+      let ask = (question, yes, no) => {
+        if (confirm(question)) yes();
+        else no();
+      }
+    </script>
+  </body>
+</html>
